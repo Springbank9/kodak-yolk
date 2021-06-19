@@ -11,24 +11,14 @@ megamenu.js STYLE STARTS HERE
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 Screen style's
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#intro {
-  position: relative;
-  z-index: 1;
-  margin-top: 0px;
-  height: 700px;
-  background-color: #F0F0F0;
-  padding: 10px 0;
-  background-image: url(/images/herd.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
+
 
 
 .menu-container {
   width: 100%;
   margin: 0 auto;
   background: transparent;
-  position: absolute;
+  position: fixed;
   
 }
 .menu .menu-container ul {
@@ -231,6 +221,17 @@ Mobile style's
   }
 }
 
+#intro {
+  position: relative;
+  z-index: 1;
+  margin-top: 0px;
+  height: 700px;
+  background-color: #F0F0F0;
+  padding: 10px 0;
+  background-image: url(/images/herd.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 #name {
   margin: 50px 0;
@@ -333,3 +334,13 @@ Mobile style's
 section {
   height: 600px;
 }
+
+.fade {
+  margin: 50px;
+  padding: 50px;
+  background-color: lightgreen;
+  transition: opacity 0.7s ease-in;
+}
+
+.fadeOut { opacity: 0; }
+.fadeIn { opacity: 1; }
