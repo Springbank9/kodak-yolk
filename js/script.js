@@ -81,3 +81,4 @@ const fadeElms = document.querySelectorAll('.fade');
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 fadeElms.forEach(el => observer.observe(el));
+

@@ -13,22 +13,36 @@ Screen style's
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 
-
+.menu {
+    width: 100%;
+}
 .menu-container {
-  width: 100%;
   margin: 0 auto;
-  background: transparent;
-  position: fixed;
-  
-}
-.menu .menu-container ul {
-    float: right;
-}
-.menu img {
-    max-width: 100%;
+  background: white;
+  opacity: 0.95;
+  width: 100%;
 }
 
-img  {
+#header-menu {
+  height: 90px;
+  position: fixed;
+  width:100%;
+  z-index:99;
+}
+.menu a.logo {
+    display: inline-block;
+    padding: 1.5em 3em;
+    width: 19%;
+    float: left;
+    color: #333;
+    font-family: 'EB Garamond', serif;
+    font-weight: 200;
+}
+
+.menu img {
+    max-width: 80%;
+    padding: 2px;
+    margin: 2px;
     opacity: 1;
 }
 .menu-mobile {
@@ -37,17 +51,18 @@ img  {
 }
 .menu-mobile:after {
   content: "\f394";
-  font-family: "Ionicons";
+  font-family: 'EB Garamond', serif;
   font-size: 2.5rem;
   padding: 0;
   float: right;
   position: relative;
   top: 50%;
-  transform: translateY(-25%);
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 .menu-dropdown-icon:before {
   content: "\f489";
-  font-family: "Ionicons";
+  font-family: 'EB Garamond', serif;
   display: none;
   cursor: pointer;
   float: right;
@@ -57,15 +72,17 @@ img  {
 }
 .menu > ul {
   margin: 0 auto;
+  font-family: 'EB Garamond', serif;
+  font-weight: 200;
   width: 100%;
   list-style: none;
   padding: 0;
   position: relative;
   /* IF .menu position=relative -> ul = container width, ELSE ul = 100% width */
-  color: black;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
+      clear: right;
+      color: #333;
+    
 }
 .menu > ul:before,
 .menu > ul:after {
@@ -80,32 +97,29 @@ img  {
   background: white;
   padding: 0;
   margin: 0;
+  color: #333;
 }
 .menu > ul > li a {
   text-decoration: none;
   padding: 1.5em 3em;
   display: block;
   color: #333;
-  text-transform: uppercase;
-  font-family: "Ionicons", sans-serif;
-  font-size: small;
 }
 .menu > ul > li:hover {
-  text-decoration: underline;
+  background: #f0f0f0;
 }
 .menu > ul > li > ul {
   display: none;
+  font-family: 'EB Garamond', serif;
+  font-weight: 200;
   width: 100%;
   background: white;
-  opacity: 1;
   padding: 10px;
   position: absolute;
   z-index: 99;
   left: 0;
   margin: 0;
   list-style: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .menu > ul > li > ul:before,
@@ -125,19 +139,20 @@ img  {
   float: left;
 }
 .menu > ul > li > ul > li a {
-  color: black;
+  color: #777;
   padding: .2em 0;
-  width: 95%;
+  width: 100%;
   display: block;
   border-bottom: 1px solid #ccc;
+}
+.menu > ul > li > ul > li a:hover{
+	color:black;
 }
 .menu > ul > li > ul > li > ul {
   display: block;
   padding: 0;
   margin: 10px 0 0;
   list-style: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .menu > ul > li > ul > li > ul:before,
@@ -156,7 +171,8 @@ img  {
   font-size: .8em;
 }
 .menu > ul > li > ul > li > ul > li a {
-  border: 0;
+  border: 0;    
+  font-size: 14px;
 }
 .menu > ul > li > ul.normal-sub {
   width: 300px;
@@ -177,14 +193,20 @@ Mobile style's
   .menu-container {
     width: 100%;
   }
+  .menu-container .menu{
+	display:inline-block;
+   }
   .menu-mobile {
-    display: block;
+    display: block;    
+    float: right;    
+    padding: 20px 20px 0;
   }
   .menu-dropdown-icon:before {
     display: block;
   }
   .menu > ul {
     display: none;
+    width:100%;
   }
   .menu > ul > li {
     width: 100%;
@@ -197,7 +219,8 @@ Mobile style's
     display: block;
   }
   .menu > ul > li > ul {
-    position: relative;
+    position: relative;    
+    padding: 0 40px;
   }
   .menu > ul > li > ul.normal-sub {
     width: 100%;
@@ -205,7 +228,7 @@ Mobile style's
   .menu > ul > li > ul > li {
     float: none;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .menu > ul > li > ul > li:first-child {
     margin: 0;
