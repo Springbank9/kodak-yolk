@@ -35,7 +35,8 @@ Screen style's
     width: 19%;
     float: left;
     color: #333;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
     font-weight: 200;
 }
 
@@ -72,7 +73,7 @@ Screen style's
 }
 .menu > ul {
   margin: 0 auto;
-  font-family: 'EB Garamond', serif;
+font-family: 'Quicksand', sans-serif;
   font-weight: 200;
   width: 100%;
   list-style: none;
@@ -110,7 +111,7 @@ Screen style's
 }
 .menu > ul > li > ul {
   display: none;
-  font-family: 'EB Garamond', serif;
+font-family: 'Quicksand', sans-serif;
   font-weight: 200;
   width: 100%;
   background: white;
@@ -258,4 +259,4 @@ Mobile style's
 
 .card {
     margin-top: 10rem;
-}
+font-family: 'Raleway', sans-serif;}
